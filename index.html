@@ -31,6 +31,44 @@
             font-weight: bold; font-size: 11px; color: #000;
             text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; 
         }
+
+    /* ================================================= */
+        /* PENYESUAIAN OTOMATIS UNTUK LAYAR HP (RESPONSIVE)  */
+        /* ================================================= */
+        @media (max-width: 768px) {
+            /* 1. Mengecilkan Legenda (Kiri Bawah) & Memberi fitur Scroll */
+            .legend {
+                bottom: 15px;
+                left: 10px;
+                padding: 8px;
+                font-size: 10px;
+                line-height: 1.4em;
+                max-height: 35vh; /* Maksimal tingginya 35% dari layar HP */
+                max-width: 130px;
+                overflow-y: auto; /* Munculkan scroll jika teksnya kepanjangan */
+            }
+            .legend h4 { font-size: 12px; margin-bottom: 5px; }
+            .legend i { width: 12px; height: 12px; }
+            
+            /* 2. Mengecilkan Menu Checklist (Kanan Atas) & Memberi fitur Scroll */
+            .leaflet-control-layers-expanded {
+                padding: 6px 10px 6px 6px;
+                font-size: 11px;
+                max-height: 40vh; /* Maksimal tingginya 40% dari layar HP */
+                overflow-y: auto;
+            }
+
+            /* 3. Mengecilkan Kotak Rangkuman Gempa (Kanan Atas) */
+            #kotak-statistik {
+                padding: 8px !important;
+                font-size: 11px !important;
+            }
+            #kotak-statistik h4 { 
+                font-size: 12px !important; 
+                margin-bottom: 5px !important; 
+            }
+        }
+            
     </style>
 </head>
 <body>
